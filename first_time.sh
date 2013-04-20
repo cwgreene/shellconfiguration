@@ -1,23 +1,34 @@
 #!/bin/bash
-if [ ! -e first_time.sh ]; then
-    echo "execute from same directory as 'first_time.sh'"
-    exit 1
-fi
+echo Changing current directory to $(dirname $0)
+cd $(dirname $0)
+
+function warn() {
+    echo $(tput setaf 3)$*$(tput sgr 0)
+}
+
+function success() {
+    echo $(tput setaf 2)$*$(tput sgr 0)
+}
+
 if [ ! -e ~/bin ]; then
-    echo Making ~/bin
+    success Making ~/bin
     mkdir ~/bin
+else
+    warn ~/bin already created. 
 fi
 if [ ! -e ~/bin ]; then
-    echo Making ~/src
+    success Making ~/src
     mkdir ~/src
+else
+    warn ~/src already created.
 fi
 echo Copying files to bin directory
 for file in bin/*; do
     if [ ! -e ~/$file ]; then
-        echo Copying $file to bin
+        success Copying $file to bin
         cp $file ~/bin
     else
-        echo ~/$file exists 
+        warn ~/$file exists 
     fi
 done
 if [ -z "$(grep '\.shell_setup' ~/.bashrc 2> /dev/null)" ]; then
@@ -26,4 +37,6 @@ if [ -z "$(grep '\.shell_setup' ~/.bashrc 2> /dev/null)" ]; then
 cd ~/.shell_setup
 source bashrc
 cd ~/" >> ~/.bashrc
+else
+    warn ~/.bashrc already setup
 fi
