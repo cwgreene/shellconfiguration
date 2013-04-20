@@ -1,7 +1,2 @@
 #!/bin/bash
-red='\[$(tput setaf 1)\]'
-white='\[$(tput setaf 7)\]'
-green='\[$(tput setaf 2)\]'
-bold='\[$(tput bold)\]'
-blue='\[$(tput setaf 4)\]'
-PS1="$red\u$white@$green\h$white [] $blue\w $white\$ "
+PS1="$bold$red\u$white@$green\h$white [$yellow"'$(gitbranch)'"$white] $blue\w $white\$ "

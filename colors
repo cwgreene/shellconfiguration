@@ -1,0 +1,7 @@
+#!/bin/bash
+yellow='\[$(tput setaf 3)\]'
+red='\[$(tput setaf 1)\]'
+white='\[$(tput setaf 7)\]'
+green='\[$(tput setaf 2)\]'
+bold='\[$(tput bold)\]'
+blue='\[$(tput setaf 4)\]'
