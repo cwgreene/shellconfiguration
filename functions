@@ -1,0 +1,7 @@
+#!/bin/bash
+function gitbranch {
+    branch=$(git branch 2> /dev/null)
+    if [[ $? == 0 ]]; then
+        echo $branch
+    fi
+}
