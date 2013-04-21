@@ -1,2 +1,2 @@
 #!/bin/bash
-PS1="$bold$red\u$white@$green\h$white [$yellow"'$(gitbranch)'"$white] $blue\w $white\$ "
+PS1="$bold$red\u$white@$green\h$white [$yellow"'$(gitbranch)'"$white] $blue\w $purple\$ $white"
