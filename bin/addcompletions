@@ -7,3 +7,4 @@ echo "_$1"' () {
 }'"
 
 complete -F _$1 $1" > ~/.shell_setup/bash_completions.d/$1
+source ~/.shell_setup/bash_completions.d/$1

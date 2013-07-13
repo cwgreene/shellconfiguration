@@ -24,6 +24,14 @@ function mysource {
     source ~/.shell_setup/$1
 }
 
+function go {
+    source ~/.shell_setup/go/go.sh
+}
+
+function gooptions {
+    cmd-options ~/.shell_setup/go/go.sh
+}
+
 preexec () { tput sgr0; }
 preexec_invoke_exec () {
     [ -n "$COMP_LINE" ] && return  # do nothing if completing
