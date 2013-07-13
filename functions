@@ -8,12 +8,20 @@ function gitbranch {
     echo $result
 }
 
+function insertpath {
+    PATH=$(~/.shell_setup/bin/addpath.py $1 $2)
+}
+
 function addpath {
-    PATH=$(~/bin/addpath.py $1)
+    PATH=$(~/.shell_setup/bin/addpath.py $1)
 }
 
 function delpath {
-    PATH=$(~/bin/delpath.py $1)
+    PATH=$(~/.shell_setup/bin/delpath.py $1)
+}
+
+function mysource {
+    source ~/.shell_setup/$1
 }
 
 preexec () { tput sgr0; }

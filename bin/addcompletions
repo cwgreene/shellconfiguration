@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "_$1"' () {
+    local cur
+    COMPREPLY=()
+    cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=($(compgen -W "$('"$1"' options ${COMP_WORDS[*]})" -- $cur))
+}'"
+
+complete -F _$1 $1" > ~/.shell_setup/bash_completions.d/$1

@@ -1,2 +1,5 @@
 addpath ~/bin
 addpath ~/src/depot_tools
+insertpath ~/.cabal/bin 0
+addpath ~/jdk1.6.0_43/bin
+addpath ~/adt-bundle-linux-x86_64-20130219/sdk/platform-tools
