@@ -24,6 +24,11 @@ function mysource {
     source ~/.shell_setup/$1
 }
 
+function resource {
+    cd ~/.shell_setup
+    source ~/.shell_setup/bashrc
+}
+
 function go {
     source ~/.shell_setup/go/go.sh
 }
