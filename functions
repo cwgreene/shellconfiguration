@@ -13,7 +13,7 @@ function insertpath {
 }
 
 function addpath {
-    PATH=$(~/.shell_setup/bin/addpath.py $1)
+    PATH=$(~/.shell_setup/bin/addpath.py $1 0)
 }
 
 function delpath {
@@ -25,8 +25,9 @@ function mysource {
 }
 
 function resource {
-    cd ~/.shell_setup
+    pushd ~/.shell_setup > /dev/null
     source ~/.shell_setup/bashrc
+    popd > /dev/null
 }
 
 function go {
