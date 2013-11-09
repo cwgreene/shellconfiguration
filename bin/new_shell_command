@@ -1,0 +1,2 @@
+vim ~/.shell_setup/bin/$1
+chmod +x ~/.shell_setup/bin/$1
