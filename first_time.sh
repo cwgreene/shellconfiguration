@@ -16,7 +16,7 @@ if [ ! -e ~/bin ]; then
 else
     warn ~/bin already created. 
 fi
-if [ ! -e ~/bin ]; then
+if [ ! -e ~/src ]; then
     success Making ~/src
     mkdir ~/src
 else
