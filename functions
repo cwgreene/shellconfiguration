@@ -12,6 +12,10 @@ function insertpath {
     PATH=$(~/.shell_setup/bin/addpath.py --path $1 --at $2)
 }
 
+function addpaths {
+    PATH=$(~/.shell_setup/bin/addpath.py --pathfile $1)
+}
+
 function addpath {
     PATH=$(~/.shell_setup/bin/addpath.py --path $1 --at 0)
 }

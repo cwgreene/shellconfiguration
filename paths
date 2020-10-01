@@ -1,1 +1,2 @@
-addpath ~/bin
+#!/bin/bash
+addpaths ~/.shell_setup/pathsfile
