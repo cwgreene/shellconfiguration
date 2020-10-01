@@ -9,11 +9,11 @@ function gitbranch {
 }
 
 function insertpath {
-    PATH=$(~/.shell_setup/bin/addpath.py $1 $2)
+    PATH=$(~/.shell_setup/bin/addpath.py --path $1 --at $2)
 }
 
 function addpath {
-    PATH=$(~/.shell_setup/bin/addpath.py $1 0)
+    PATH=$(~/.shell_setup/bin/addpath.py --path $1 --at 0)
 }
 
 function delpath {
@@ -28,14 +28,6 @@ function resource {
     pushd ~/.shell_setup > /dev/null
     source ~/.shell_setup/bashrc
     popd > /dev/null
-}
-
-function go {
-    source ~/.shell_setup/go/go.sh
-}
-
-function gooptions {
-    cmd-options ~/.shell_setup/go/go.sh
 }
 
 preexec () { tput sgr0; }
