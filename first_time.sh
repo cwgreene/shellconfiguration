@@ -36,7 +36,7 @@ if [ -z "$(grep '\.shell_setup' ~/.bashrc 2> /dev/null)" ]; then
     echo "
 pushd ~/.shell_setup > /dev/null
 source bashrc
-popd ~/ > /dev/null" >> ~/.bashrc
+popd > /dev/null" >> ~/.bashrc
 else
     warn ~/.bashrc already setup
 fi
