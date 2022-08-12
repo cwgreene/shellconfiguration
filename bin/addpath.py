@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys
 import os
 import argparse
@@ -10,8 +10,6 @@ def add_path(path, new_path, pos=None):
     if pos == None:
         pos = len(paths)
     paths.insert(pos,new_path)
-    afile = open("/tmp/add_path.log", "a")
-    print>>afile, path, new_path
     return ":".join(paths)
 
 def add_paths(path, pathfile):
@@ -40,5 +38,5 @@ def main():
     if options.pathfile:
         print(add_paths(os.environ["PATH"], options.pathfile))
     else:
-        print add_path(os.environ["PATH"], options.path, options.at)
+        print(add_path(os.environ["PATH"], options.path, options.at))
 main()
