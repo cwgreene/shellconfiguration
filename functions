@@ -4,7 +4,7 @@ function gitbranch {
     if [[ $? != 0 ]]; then
         return
     fi
-    result=$(echo "$branches" | grep '^* ' | grep -o '[^*][^ ].*')
+    result=$(echo "$branches" | grep '^* ' | grep -o '[^* ][^ ]*')
     echo $result
 }
 
@@ -33,11 +33,3 @@ function resource {
     source ~/.shell_setup/bashrc
     popd > /dev/null
 }
-
-preexec () { tput sgr0; }
-preexec_invoke_exec () {
-    [ -n "$COMP_LINE" ] && return  # do nothing if completing
-    local this_command=`history 1 | sed -e "s/^[ ]*[0-9]*[ ]*//g"`;
-    preexec "$this_command"
-}
-trap 'preexec_invoke_exec' DEBUG

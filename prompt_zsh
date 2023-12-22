@@ -1,0 +1,4 @@
+#!/bin/zsh
+precmd() {
+	PS1="%B%F{red}%n@%F{white}%F{green}%m%F{white} [%F{yellow}$(gitbranch)%F{white}] %F{blue}%~ %F{magenta}\$ %F{white}"
+}
