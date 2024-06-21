@@ -1,0 +1,6 @@
+#!/bin/zsh
+function resource {
+    pushd ~/.shell_setup > /dev/null
+    source ~/.shell_setup/zshrc
+    popd > /dev/null
+}
